@@ -1,7 +1,5 @@
 package contasBancarias.java;
 
-import contasBancarias.java.*;
-
 import java.math.BigDecimal;
 
 public class Aplicacao {
@@ -9,17 +7,17 @@ public class Aplicacao {
     public static void main(String[] args) {
         Banco bancoItau = new Banco();
 
-        Conta contaRoger = new ContaCorrente( new PessoaFisica("Roger Machado", "Rua Raposo Tavares , 8000","112.312.233-50"),
+        Conta contaRoger = new ContaCorrente(new PessoaFisica("Roger Machado", "Rua Raposo Tavares , 8000", "112.312.233-50"),
                 BigDecimal.valueOf(1_000), 1);
-        Conta contaPaulo = new ContaCorrente( new PessoaJuridica("Paulo Coelho", "Avenida Castelo Branco , 500","01.002.248/0001-12"),
+        Conta contaPaulo = new ContaCorrente(new PessoaJuridica("Paulo Coelho", "Avenida Castelo Branco , 500", "01.002.248/0001-12"),
                 BigDecimal.valueOf(10_000), 2);
-        Conta contaMarcos = new ContaPoupanca( new PessoaFisica("Marcos Mion", "Rua Jose Mauro de Vasconcelos , 10","456.231.223-12"),
+        Conta contaMarcos = new ContaPoupanca(new PessoaFisica("Marcos Mion", "Rua Jose Mauro de Vasconcelos , 10", "456.231.223-12"),
                 BigDecimal.valueOf(1_000), 3);
-        Conta contaPatricia = new ContaPoupanca( new PessoaJuridica("Patrícia Abravanel", "Rua das Gameleiras , 23","08.147.669/0001-12"),
+        Conta contaPatricia = new ContaPoupanca(new PessoaJuridica("Patrícia Abravanel", "Rua das Gameleiras , 23", "08.147.669/0001-12"),
                 BigDecimal.valueOf(10_000), 4);
-        Conta contaMariana = new ContaInvestimento( new PessoaFisica("Mariana Ximenes", "Av. Roberto Freire , 0230","784214319"),
+        Conta contaMariana = new ContaInvestimento(new PessoaFisica("Mariana Ximenes", "Av. Roberto Freire , 0230", "784214319"),
                 BigDecimal.valueOf(1_000), 5);
-        Conta contaRoberto = new ContaInvestimento( new PessoaJuridica("Roberto Carlos", "Av Salgado Filho , 89","17.217.813/0001-33"),
+        Conta contaRoberto = new ContaInvestimento(new PessoaJuridica("Roberto Carlos", "Av Salgado Filho , 893", "17.217.813/0001-33"),
                 BigDecimal.valueOf(10_000), 6);
 
         System.out.println("Lista de Contas Cadastradas");
@@ -88,12 +86,13 @@ public class Aplicacao {
 
         System.out.println("--------------Realizando Transferencias------------------");
 
-        System.out.println("Transferencia R$ 200,00 para Marcos");
-        contaRoberto.transferir(BigDecimal.valueOf(200), contaMarcos);
+        contaRoberto.consultarSaldo();
 
-        System.out.println("Transferencia R$ 30.000,00 para Roger");
+        System.out.println("Transferencia de R$ 2.000,00 para Marcos");
+        contaRoberto.transferir(BigDecimal.valueOf(2000), contaMarcos);
+
+        System.out.println("Transferencia de R$ 30.000,00 para Roger");
         contaRoberto.transferir(BigDecimal.valueOf(30_000), contaRoger);
-
 
 
     }
