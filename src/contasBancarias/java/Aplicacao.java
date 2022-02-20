@@ -65,14 +65,20 @@ public class Aplicacao {
 
 
         System.out.println("---------- Saque das contas -----------");
-
+        System.out.println("Saque de R$ 500,00");
         contaRoger.sacar(BigDecimal.valueOf(500));
+        System.out.println("Saque de R$ 10.000,00");
         contaPaulo.sacar(BigDecimal.valueOf(10_000));
-        contaPaulo.sacar(BigDecimal.valueOf(1000));
+        System.out.println("Saque de R$ 1.000,00");
+        contaPaulo.sacar(BigDecimal.valueOf(1_000));
+        System.out.println("Saque de R$ 1.001,00");
         contaMarcos.sacar(BigDecimal.valueOf(1_001));
+        System.out.println("Saque de R$ 990,00");
         contaPatricia.sacar(BigDecimal.valueOf(990));
+        System.out.println("Saque de R$ 100,00");
         contaMariana.sacar(BigDecimal.valueOf(100));
-        contaRoberto.sacar(BigDecimal.valueOf(10000));
+        System.out.println("Saque de R$ 10.000,00");
+        contaRoberto.sacar(BigDecimal.valueOf(10_000));
         System.out.println();
 
         System.out.println("---------- Valores Investidos ------------");
