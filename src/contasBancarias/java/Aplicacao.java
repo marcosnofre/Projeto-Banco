@@ -20,7 +20,16 @@ public class Aplicacao {
         Conta contaRoberto = new ContaInvestimento(new PessoaJuridica("Roberto Carlos", "Av Salgado Filho , 893", "17.217.813/0001-33"),
                 BigDecimal.valueOf(10_000), 6);
 
-        System.out.println("Lista de Contas Cadastradas");
+        System.out.println("------- Abrindo novas conta --------");
+
+        bancoItau.criarConta(contaRoger);
+        bancoItau.criarConta(contaPaulo);
+        bancoItau.criarConta(contaMarcos);
+        bancoItau.criarConta(contaPatricia);
+        bancoItau.criarConta(contaMariana);
+        bancoItau.criarConta(contaRoberto);
+
+        System.out.println("-------- Lista de Contas Cadastradas--------");
 
         System.out.println(contaRoger);
         System.out.println();
@@ -35,14 +44,6 @@ public class Aplicacao {
         System.out.println(contaRoberto);
         System.out.println();
 
-        System.out.println("-------Abrindo novas conta--------");
-
-        bancoItau.criarConta(contaRoger);
-        bancoItau.criarConta(contaPaulo);
-        bancoItau.criarConta(contaMarcos);
-        bancoItau.criarConta(contaPatricia);
-        bancoItau.criarConta(contaMariana);
-        bancoItau.criarConta(contaRoberto);
 
         System.out.println("--------- Consultando saldo de contas ----------");
 
