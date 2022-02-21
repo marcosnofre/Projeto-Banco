@@ -57,10 +57,10 @@ public abstract class Conta {
             System.out.printf("Não é possível realizar essa operação. %nSeu saldo é de R$ %.2f%n%n", this.saldo);
         } else if (Verificacoes.verificarSePessoaJuridica(this)) {
             if (!Verificacoes.verificarSeSaldoMaiorQueValorPJ(this, valor)) {
-                System.out.printf("Não é possível realizar essa operação  %n%n-- OBSERVAÇÃO: Há uma taxa de 0,5%% em Transferencias realizadas por Pessoa Jurídica --%n  %nSeu saldo é de R$ %.2f%n", this.saldo);
+                System.out.printf("Não é possível realizar essa operação  %n%n-- OBSERVAÇÃO: Há uma taxa de 0,5%% em Saques realizados por Pessoa Jurídica --%n  %nSeu saldo é de R$ %.2f%n", this.saldo);
             } else {
                 this.saldo = this.saldo.subtract(valor.multiply(BigDecimal.valueOf(1.005)));
-                System.out.printf("Saque realizado com sucesso! %nSeu saldo é de R$ %.2f%n%n", this.saldo);
+                System.out.printf("Saque realizado com sucesso! %n-- OBSERVAÇÃO: Há uma taxa de 0,5%% em Saques realizados por Pessoa Jurídica --%nSeu saldo é de R$ %.2f%n%n", this.saldo);
             }
         } else {
             this.saldo = this.saldo.subtract(valor);
